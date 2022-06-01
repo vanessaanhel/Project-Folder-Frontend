@@ -117,4 +117,7 @@ main {
   padding-top: 98px;
 }
 
-
+.social a img{
+  width: 44px;
+  margin-right: 1em;
+}
