@@ -129,17 +129,47 @@ a:visited {
     margin: 0;
   }
   
-  nav li {
+  /*nav li {
     display: inline-block;
-  }
+  }*/
   
   nav a {
     display: block;
     padding: 12px;
   }
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: -13px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+  }
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
   
   main {
-    padding-top: 98px;
+    padding-top: 48px;
   }
   
   .social a img {
@@ -205,6 +235,9 @@ height: auto;
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -221,6 +254,23 @@ Medium devices (640px and larger)
     float: right;
     margin-top: 4px;
   }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  .navtoggle.responsive nav {
+    padding: 0;
+  }
+
+  .navtoggle.responsive li  {
+    padding: 0;
+    border-top: none;
+    }
 
   #hero span {
     display: block;
@@ -249,6 +299,10 @@ Medium devices (640px and larger)
 
   body {
     font-size: 18px;
+  }
+
+  main {
+    padding-top: 92px;
   }
 }
 /* .col-1 {width: 8.33%;}
